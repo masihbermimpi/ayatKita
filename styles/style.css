@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+body {
+  background-color: #f8f9fd;
+}
+
+.container {
+  width: 100%;
+  height: 600px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 65px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  gap: 30px;
+}
+
+.menu ul li a,
+.menu ul li,
+.dropdownMenu {
+  text-decoration: none;
+  list-style-type: none;
+  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+.menu ul li:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.burger {
+  position: relative;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 21px;
+  left: 5px;
+}
+
+.dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 70px;
+  right: 60px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.imgLogo {
+  width: 100px;
+}
+
+.logoEmrido {
+  width: 150px;
+}
+.imgLogo:hover {
+  transform: scale(1.1);
+}
+
+#gr, #gre {
+  color: #23c55e;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 150px 100px;
+  gap: 15px;
+}
+
+.title {
+  font-weight: 700;
+  color: #23c55e;
+  font-size: 18px;
+}
+
+.text,
+.translation {
+  font-weight: 700;
+}
+
+.generate {
+  margin-top: 30px;
+  width: 120px;
+  height: 50px;
+  background-color: #23c55e;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#about {
+  margin: 50px 100px;
+}
+
+.info {
+  color: #23c55e;
+  font-weight: 600;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 14;
+}
+
+.author {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+footer {
+  width: 100%;
+  height: 250px;
+  background-color: #171d29;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 550px) {
+  main {
+    margin: 120px 50px;
+  }
+  #about {
+    margin: 70px 50px;
+  }
+  .burger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  header {
+    padding: 35px 40px;
+  }
+}
